@@ -1,0 +1,26 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Use node for generating a readme file",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpencerRSMS/readme-generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator"
+  ],
+  "author": "Vess Stewart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpencerRSMS/readme-generator/issues"
+  },
+  "homepage": "https://github.com/SpencerRSMS/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  }
+}
