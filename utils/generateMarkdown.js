@@ -1,40 +1,60 @@
 const { badges, links, sections } = require('./licenses/license');
 
 function renderLicenseBadge(license) {
-    if(license === "None") {
+    license = license.toUpperCase();
+
+    if(license === "NONE") {
         return "";
     }
-
-    license = license.toUpperCase();
 
     return badges[license];
 }
 
 function renderLicenseLink(license) {
-    if(license === "None") {
+    license = license.toUpperCase();
+
+    if(license === "NONE") {
         return "";
     }
 
-    license = license.toLowerCase();
-
-    return links[license];
+    return `${license} LINK: ${links[license]}`;
 }
 
 function renderLicenseSection(license) {
-    if(license === "None") {
-        return "";
-    }
-
     license = license.toUpperCase();
 
-    return sections[license];
+    if(license === "NONE") {
+        return "UNLICENSED \n";
+    }
+
+    return `LICENSE COURTESY OF  ${license}:\n ${sections[license]}`;
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    return `# ${data.title}
-    
-    `;
+    return `# ${data.title}\n
+### ${data.description}\n
+## Table of Contents
+- [Usage](#usage)
+- [Features](#features)
+- [Installation](#installation)
+- [License](#license)
+- [How to Contribute](#contribution)
+- [Collaborators](#collaborators)
+
+## Usage
+${data.usage}\n
+## Features
+${data.features}\n
+## Installation
+${data.installation}\n
+## License
+${renderLicenseBadge(data.license)}\n
+${renderLicenseSection(data.license)}\n
+${renderLicenseLink(data.license)}\n
+## Contribution
+${data.contribution_plan}\n
+## Collaborators
+${data.collaborators}\n`;
 }
 
 module.exports = generateMarkdown;

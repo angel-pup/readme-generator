@@ -1,6 +1,7 @@
 // Import necessary packages/functions
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 const questions = require('./utils/questions');
 // Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -128,6 +129,7 @@ async function init() {
     }
 
     console.log(answers);
+    writeToFile(path.join(__dirname, "./render/README.md"), answers);
 }
 
 // Function call to initialize app

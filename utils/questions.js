@@ -103,7 +103,7 @@ const questions = {
             type: "list",
             name: "license",
             message: "What license would you like to add?",
-            choices: ["None", "MIT", "APACHE", "BOOST", "BSD-3", "CC0", "ECLIPSE", "IBM", "ISC", "WTFPL", "ZLIB"],
+            choices: ["None", "MIT", "APACHE", "BOOST", "CC0", "IBM", "ISC", "ZLIB"],
             default: "None"
         },
         {
