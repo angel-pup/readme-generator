@@ -42,7 +42,8 @@ const questions = {
         {
             type: "input",
             name: "name",
-            message: "Please provide author's name: "
+            message: "Please provide author's name: ",
+            default: "Author Unknown"
         },
         {
             type: "confirm",
@@ -67,7 +68,8 @@ const questions = {
         {
             type: "input",
             name: "name",
-            message: "Please give the name of a Collaborator: "
+            message: "Please give the name of a Collaborator: ",
+            default: "Contributor Name Unknown"
         },
         {
             type: "confirm",
@@ -79,7 +81,8 @@ const questions = {
     "COLLABORATOR_GITHUB": {
         type: "input",
         name: "username",
-        message: "What's their GitHub username?"
+        message: "What's their GitHub username?",
+        default: "GitHub Unknown"
     },
     "BASIC": [
         {

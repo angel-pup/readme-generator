@@ -103,9 +103,9 @@ async function init() {
 
         if (author_data.github_bool) {
             const github_data = await ask(questions["COLLABORATOR_GITHUB"])
-            answers["collaborators"] = [author_data.name, github_data.username];
+            answers["collaborators"] = [[author_data.name, github_data.username]];
         } else {
-            answers["collaborators"] = [author_data.name, "GitHub currently unavailable."];
+            answers["collaborators"] = [[author_data.name, "GitHub currently unavailable."]];
         }
     }
 
