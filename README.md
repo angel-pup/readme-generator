@@ -12,6 +12,7 @@
 
 ## Usage
 #### To practice Node.js w/ file generation
+[![README GENERATOR VIDEO](https://img.youtube.com/vi/BRskx2Yj4DE/0.jpg)](http://www.youtube.com/watch?v=BRskx2Yj4DE "README Generator")
 
 ## Features
 No features listed at this time.
